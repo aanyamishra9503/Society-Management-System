@@ -1,21 +1,21 @@
 # Society-Management-System
-A Python-based Society Maintenance Management System that helps manage residents, track maintenance payments, and generate reports efficiently using a MySQL database.
+A Python-based Society Maintenance Management System that helps manage residents, track maintenance payments, and generate reports efficiently using a MySQL database.\n
 
-Features
-🔷Admin Authentication:
+Features\n
+🔷Admin Authentication:\n
 Secure login using hashed passwords (SHA-256)
-🔷Resident Management (CRUD):
+🔷Resident Management (CRUD):\n
 Add, update, delete, and search resident records
 Store flat number, name, contact, and email
-🔷Payment Tracking:
+🔷Payment Tracking:\n
 Record monthly maintenance payments
 Prevent duplicate entries using unique constraints
-🔷Reports Generation:
+🔷Reports Generation:\n
 Generate dues report (pending payments)
 Export search results and dues to CSV files
-🔷Analytics:
+🔷Analytics:\n
 Monthly total collection
-Flat-wise payment history
+Flat-wise payment history\n
 
 🛠Tech Stack
 Python
