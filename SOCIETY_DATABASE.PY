@@ -2,7 +2,6 @@ import mysql.connector as sql
 import csv, pickle
 from datetime import date
 
-# ----------------- File paths -----------------
 RESIDENTS_CSV = "residents_backup.csv"
 PAYMENTS_CSV = "payments_backup.csv"
 RESIDENTS_BIN = "residents.dat"
@@ -10,7 +9,6 @@ PAYMENTS_BIN = "payments.dat"
 DUES_TXT = "dues.txt"
 SEARCH_TXT = "search.txt"
 
-# ----------------- Utility Functions -----------------
 def validate_flat(flat):
     if flat.isdigit():
         return True
@@ -35,11 +33,11 @@ def write_search_report(results, filename):
             f.write(str(r) + "\n")
     print("Search report saved as", filename)
 
-# ----------------- MySQL Connection -----------------
+
 db = sql.connect(host="localhost", user="root", password="yourpass", database="society")
 cur = db.cursor()
 
-# Create tables if not exist
+
 cur.execute("""
 CREATE TABLE IF NOT EXISTS residents (
     flat_no VARCHAR(10) PRIMARY KEY,
@@ -60,7 +58,7 @@ CREATE TABLE IF NOT EXISTS payments (
 """)
 db.commit()
 
-# ----------------- Core Functions -----------------
+
 def add_resident():
     flat = input("Enter flat no: ")
     if not validate_flat(flat):
@@ -160,7 +158,7 @@ def import_from_backup():
     except FileNotFoundError:
         print("Backup files not found.")
 
-# ----------------- MIS / Reports -----------------
+
 def cleared_payments():
     month = input("Enter month: ")
     cur.execute("SELECT flat_no, name FROM residents WHERE flat_no IN (SELECT flat_no FROM payments WHERE month=%s)", (month,))
@@ -191,7 +189,7 @@ def flat_wise_history():
     else:
         print("No payment history for this flat.")
 
-# ----------------- Menu -----------------
+
 while True:
     print("\n--- Society Maintenance Management ---")
     print("1. Add Resident")
