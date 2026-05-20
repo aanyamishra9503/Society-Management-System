@@ -26,10 +26,14 @@ A Python-based Society Maintenance Management System that helps manage residents
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - Python  
 - MySQL  
 - mysql-connector  
 - CSV  
-- hashlib  
+- hashlib
+
+##  Author
+
+Made by: Aanya Mishra

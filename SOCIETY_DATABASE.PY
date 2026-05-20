@@ -9,6 +9,10 @@ PAYMENTS_BIN = "payments.dat"
 DUES_TXT = "dues.txt"
 SEARCH_TXT = "search.txt"
 
+<<<<<<< HEAD
+=======
+#Utility Functions
+>>>>>>> 9b9a17f2672100cf86c3569bfa7c91a93da893db
 def validate_flat(flat):
     if flat.isdigit():
         return True
@@ -33,7 +37,11 @@ def write_search_report(results, filename):
             f.write(str(r) + "\n")
     print("Search report saved as", filename)
 
+<<<<<<< HEAD
 
+=======
+#MySQL Connection
+>>>>>>> 9b9a17f2672100cf86c3569bfa7c91a93da893db
 db = sql.connect(host="localhost", user="root", password="yourpass", database="society")
 cur = db.cursor()
 
@@ -58,7 +66,11 @@ CREATE TABLE IF NOT EXISTS payments (
 """)
 db.commit()
 
+<<<<<<< HEAD
 
+=======
+# Core Functions 
+>>>>>>> 9b9a17f2672100cf86c3569bfa7c91a93da893db
 def add_resident():
     flat = input("Enter flat no: ")
     if not validate_flat(flat):
@@ -158,7 +170,11 @@ def import_from_backup():
     except FileNotFoundError:
         print("Backup files not found.")
 
+<<<<<<< HEAD
 
+=======
+# Reports
+>>>>>>> 9b9a17f2672100cf86c3569bfa7c91a93da893db
 def cleared_payments():
     month = input("Enter month: ")
     cur.execute("SELECT flat_no, name FROM residents WHERE flat_no IN (SELECT flat_no FROM payments WHERE month=%s)", (month,))
@@ -189,7 +205,11 @@ def flat_wise_history():
     else:
         print("No payment history for this flat.")
 
+<<<<<<< HEAD
 
+=======
+# Menu
+>>>>>>> 9b9a17f2672100cf86c3569bfa7c91a93da893db
 while True:
     print("\n--- Society Maintenance Management ---")
     print("1. Add Resident")
