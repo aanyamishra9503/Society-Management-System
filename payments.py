@@ -7,6 +7,7 @@ from reports import write_due_report
 PAYMENTS_CSV = "payments_backup.csv"
 PAYMENTS_BIN = "payments.dat"
 DUES_TXT = "dues.txt"
+RESIDENTS_CSV = "residents_backup.csv"
 
 def record_payment():
     flat = input("Enter flat no: ")

@@ -1,5 +1,5 @@
 from residents import add_resident, update_resident, delete_resident, search_resident, view_residents
-from payments import record_payment, show_dues, cleared_payments, total_collection, flat_wise_history, import_from_backup
+from payments import record_payment, show_dues, cleared_payments, total_collection, flat_wise_history, import_from_backup, pending_dues
 
 
 while True:
